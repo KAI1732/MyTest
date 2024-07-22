@@ -1,0 +1,129 @@
+﻿  正在验证源
+  正在将源远程复制到“192.168.91.129”
+  正在验证体系结构
+  正在验证体系结构
+  正在启动远程生成
+  正在编译源:
+  main.c
+C:\Users\kai\source\repos\HttpServer\HttpServer\main.c(11,5): warning : implicit declaration of function ‘chdir’ [-Wimplicit-function-declaration]
+C:\Users\kai\source\repos\HttpServer\HttpServer\main.c(11,5): warning :    11 |     chdir(argv[2]);
+C:\Users\kai\source\repos\HttpServer\HttpServer\main.c(11,5): warning :       |     ^~~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\main.c(12,27): warning : conversion from ‘int’ to ‘short unsigned int’ may change value [-Wconversion]
+C:\Users\kai\source\repos\HttpServer\HttpServer\main.c(12,27): warning :    12 |     unsigned short port = atoi(argv[1]);
+C:\Users\kai\source\repos\HttpServer\HttpServer\main.c(12,27): warning :       |                           ^~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\main.c(13,5): warning : implicit declaration of function ‘epollRun’ [-Wimplicit-function-declaration]
+C:\Users\kai\source\repos\HttpServer\HttpServer\main.c(13,5): warning :    13 |     epollRun(port);
+C:\Users\kai\source\repos\HttpServer\HttpServer\main.c(13,5): warning :       |     ^~~~~~~~
+  server.c
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(82,25): warning : unused variable ‘flag’ [-Wunused-variable]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(82,25): warning :    82 |                     int flag = 1;
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(82,25): warning :       |                         ^~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(127,19): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(127,19): warning :   127 |     while ((len = recv(cfd, tmp, sizeof(tmp), 0)) > 0)
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(127,19): warning :       |                   ^~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(131,13): warning : implicit declaration of function ‘memcpy’ [-Wimplicit-function-declaration]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(131,13): warning :   131 |             memcpy(buf + total, tmp, len);
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(131,13): warning :       |             ^~~~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(10,1): message : include ‘<string.h>’ or provide a declaration of ‘memcpy’
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(10,1): message :     9 | #include <dirent.h>
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(10,1): message :   +++ |+#include <string.h>
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(10,1): message :    10 |
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(131,13): warning : incompatible implicit declaration of built-in function ‘memcpy’ [-Wbuiltin-declaration-mismatch]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(131,13): warning :   131 |             memcpy(buf + total, tmp, len);
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(131,13): warning :       |             ^~~~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(131,13): message : include ‘<string.h>’ or provide a declaration of ‘memcpy’
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(131,38): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(131,38): warning :   131 |             memcpy(buf + total, tmp, len);
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(131,38): warning :       |                                      ^~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(140,20): warning : implicit declaration of function ‘strstr’ [-Wimplicit-function-declaration]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(140,20): warning :   140 |         char* pt = strstr(buf, "\r\n");
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(140,20): warning :       |                    ^~~~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(140,20): message : include ‘<string.h>’ or provide a declaration of ‘strstr’
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(140,20): warning : incompatible implicit declaration of built-in function ‘strstr’ [-Wbuiltin-declaration-mismatch]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(140,20): message : include ‘<string.h>’ or provide a declaration of ‘strstr’
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(141,22): warning : conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(141,22): warning :   141 |         int reqlen = pt - buf;
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(141,22): warning :       |                      ^~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(172,9): warning : implicit declaration of function ‘strcmp’ [-Wimplicit-function-declaration]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(172,9): warning :   172 |     if (strcmp(path, "/") == 0)
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(172,9): warning :       |         ^~~~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(172,9): message : include ‘<string.h>’ or provide a declaration of ‘strcmp’
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(194,61): warning : conversion from ‘__off_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(194,61): warning :   194 |         sendHeadMsg(cfd, 200, "OK", getContentType(file), st.st_size);
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(194,61): warning :       |                                                           ~~^~~~~~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(207,19): warning : implicit declaration of function ‘read’; did you mean ‘fread’? [-Wimplicit-function-declaration]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(207,19): warning :   207 |         int len = read(fd, buf, sizeof(buf));
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(207,19): warning :       |                   ^~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(207,19): warning :       |                   fread
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(208,36): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(208,36): warning :   208 |         if (len > 0)send(cfd, buf, len, 0);
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(208,36): warning :       |                                    ^~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(223,19): warning : implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(223,19): message : include ‘<string.h>’ or provide a declaration of ‘strlen’
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(223,19): warning : incompatible implicit declaration of built-in function ‘strlen’ [-Wbuiltin-declaration-mismatch]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(223,19): message : include ‘<string.h>’ or provide a declaration of ‘strlen’
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(236,9): warning : implicit declaration of function ‘close’; did you mean ‘pclose’? [-Wimplicit-function-declaration]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(236,9): warning :   236 |         close(cfd);
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(236,9): warning :       |         ^~~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(236,9): warning :       |         pclose
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(245,15): warning : implicit declaration of function ‘strrchr’ [-Wimplicit-function-declaration]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(245,15): warning :   245 |     char* p = strrchr(fileName, '.');
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(245,15): warning :       |               ^~~~~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(245,15): message : include ‘<string.h>’ or provide a declaration of ‘strrchr’
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(245,15): warning : incompatible implicit declaration of built-in function ‘strrchr’ [-Wbuiltin-declaration-mismatch]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(245,15): message : include ‘<string.h>’ or provide a declaration of ‘strrchr’
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(364,27): warning : incompatible implicit declaration of built-in function ‘strlen’ [-Wbuiltin-declaration-mismatch]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(364,27): warning :   364 |             sprintf(buf + strlen(buf), "<tr><td><a href=\"%s/\">%s/</a></td><td></td></tr>", name, name);
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(364,27): warning :       |                           ^~~~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(364,27): message : include ‘<string.h>’ or provide a declaration of ‘strlen’
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(368,27): warning : incompatible implicit declaration of built-in function ‘strlen’ [-Wbuiltin-declaration-mismatch]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(368,27): warning :   368 |             sprintf(buf + strlen(buf), "<tr><td><a href=\"%s\">%s</a></td><td>%ld</td></tr>", name, name, st.st_size);
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(368,27): warning :       |                           ^~~~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(368,27): message : include ‘<string.h>’ or provide a declaration of ‘strlen’
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(370,24): warning : incompatible implicit declaration of built-in function ‘strlen’ [-Wbuiltin-declaration-mismatch]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(370,24): warning :   370 |         send(cfd, buf, strlen(buf), 0);
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(370,24): warning :       |                        ^~~~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(370,24): message : include ‘<string.h>’ or provide a declaration of ‘strlen’
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(371,9): warning : implicit declaration of function ‘memset’ [-Wimplicit-function-declaration]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(371,9): warning :   371 |         memset(buf, 0, sizeof(buf));
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(371,9): warning :       |         ^~~~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(371,9): message : include ‘<string.h>’ or provide a declaration of ‘memset’
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(371,9): warning : incompatible implicit declaration of built-in function ‘memset’ [-Wbuiltin-declaration-mismatch]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(371,9): message : include ‘<string.h>’ or provide a declaration of ‘memset’
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(372,9): warning : implicit declaration of function ‘free’ [-Wimplicit-function-declaration]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(372,9): warning :   372 |         free(namelist[i]);
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(372,9): warning :       |         ^~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(10,1): message : include ‘<stdlib.h>’ or provide a declaration of ‘free’
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(10,1): message :     9 | #include <dirent.h>
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(10,1): message :   +++ |+#include <stdlib.h>
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(10,1): message :    10 |
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(372,9): warning : incompatible implicit declaration of built-in function ‘free’ [-Wbuiltin-declaration-mismatch]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(372,9): warning :   372 |         free(namelist[i]);
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(372,9): warning :       |         ^~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(372,9): message : include ‘<stdlib.h>’ or provide a declaration of ‘free’
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(361,13): warning : unused variable ‘ret’ [-Wunused-variable]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(361,13): warning :   361 |         int ret = stat(subpath, &st);
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(361,13): warning :       |             ^~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(375,20): warning : incompatible implicit declaration of built-in function ‘strlen’ [-Wbuiltin-declaration-mismatch]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(375,20): warning :   375 |     send(cfd, buf, strlen(buf), 0);
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(375,20): warning :       |                    ^~~~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(375,20): message : include ‘<string.h>’ or provide a declaration of ‘strlen’
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(376,5): warning : incompatible implicit declaration of built-in function ‘free’ [-Wbuiltin-declaration-mismatch]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(376,5): warning :   376 |     free(namelist);
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(376,5): warning :       |     ^~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(376,5): message : include ‘<stdlib.h>’ or provide a declaration of ‘free’
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(396,29): warning : implicit declaration of function ‘isxdigit’ [-Wimplicit-function-declaration]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(396,29): warning :   396 |         if (*from == '%' && isxdigit(*(from + 1)) && isxdigit(*(from + 2)))
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(396,29): warning :       |                             ^~~~~~~~
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(10,1): message : include ‘<ctype.h>’ or provide a declaration of ‘isxdigit’
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(10,1): message :     9 | #include <dirent.h>
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(10,1): message :   +++ |+#include <ctype.h>
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(10,1): message :    10 |
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(398,19): warning : conversion from ‘int’ to ‘char’ may change value [-Wconversion]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(398,19): warning :   398 |             *to = ((hexit(*(from + 1)) * 16) + hexit(*(from + 2)));
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(398,19): warning :       |                   ^
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(156,1): warning : control reaches end of non-void function [-Wreturn-type]
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(156,1): warning :   156 | }
+C:\Users\kai\source\repos\HttpServer\HttpServer\server.c(156,1): warning :       | ^
+  正在链接对象
+  HttpServer.vcxproj -> C:\Users\kai\source\repos\HttpServer\HttpServer\bin\x64\Debug\HttpServer.out
