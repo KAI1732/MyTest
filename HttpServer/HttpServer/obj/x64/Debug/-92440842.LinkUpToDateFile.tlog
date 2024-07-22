@@ -1,1 +1,0 @@
-g++ -o "/home/kai/projects/HttpServer/bin/x64/Debug/HttpServer.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /home/kai/projects/HttpServer/obj/x64/Debug/main.o /home/kai/projects/HttpServer/obj/x64/Debug/server.o
